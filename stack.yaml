@@ -1,0 +1,10 @@
+# This file configures Stack for this project.
+
+# The resolver contains a snapshot of Haskell packages that are compatible
+# with each other.
+resolver: lts-13.26
+
+# A list of Haskell packages contained in this Stack project. In this project,
+# we only have one Haskell package.
+packages:
+  - .

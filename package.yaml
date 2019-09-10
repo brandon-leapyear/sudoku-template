@@ -1,0 +1,36 @@
+name: sudoku
+author: your_name_here@leapyear.io
+
+# Useful flags to enable in GHC, the Haskell compiler
+ghc-options:
+- -O2
+- -Wall
+- -Werror
+- -Wcompat
+- -Wincomplete-uni-patterns
+- -Wincomplete-record-updates
+- -Wredundant-constraints
+- -Wnoncanonical-monad-instances
+
+library:
+  source-dirs: src
+  dependencies:
+    - base
+
+executables:
+  sudoku:
+    source-dirs: exe
+    main: Main.hs
+    dependencies:
+      - base
+      - sudoku
+
+tests:
+  sudoku-test:
+    source-dirs: test
+    main: Main.hs
+    dependencies:
+      - base
+      - sudoku
+      - tasty
+      - tasty-hunit
